@@ -1,0 +1,101 @@
+.home {
+    padding: 50px 80px 80px 80px;
+	margin: auto 0;
+	text-align: center;
+
+	h5 {
+		color: darken(#5CAFE1, 50%);
+		font-weight: bold;
+	}
+
+	.textos {
+		margin-top: 30px;
+
+		.titulo {
+			h5 {
+				font-size: 20px;
+				font-weight: bold;
+			}
+		}
+		.corpo {
+			font-size: 10px;
+    		color: rgba(0,0,0,0.5);
+		}
+	}
+}
+
+
+$iconColor: dimgray;
+$iconSize: 32px; // (in pixels)
+$searchWidth: 300px; // (in pixels)
+$searchMaxHeight: 130px; // (in pixels)
+$fontSize: 1.6rem;
+
+.search-icon {
+  font-size: $iconSize;
+  color: $iconColor;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  .fa-search {
+	color: #5CAFE1;
+}
+.fa-close {
+	color: #5CAFE1;
+}
+}
+
+.search-toggle {
+	text-align: center;
+  .search-icon {
+    &.icon-close { display: none; 	text-align: center;}
+  }
+  &.opened {
+    .search-icon {
+      &.icon-search { display: none; 	text-align: center;}
+      &.icon-close { display: block; 	text-align: center;}
+    }
+  }
+}
+.search-container {
+  position: relative;
+  @include transition(all .3s);
+  max-height: 0;
+  overflow: hidden;
+  background-color: #eee;
+  &.opened { max-height: $searchMaxHeight; }
+  input[type="text"] {
+    outline: none;
+    font-size: $fontSize;
+    margin: 18px;
+    width: $searchWidth;
+    background-color: inherit;
+    border: 0;
+  }
+  .search-icon {
+    vertical-align: middle;
+  }
+}
+
+// Demo CSS
+.container {
+  position: relative;
+}
+
+.search-container {
+  position: absolute;
+  left: 15px;
+}
+
+.parabens {
+  padding-top: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin: auto 0;
+  color: darken(#5CAFE1, 50%);
+
+  p {
+    color: green;
+
+  }
+}

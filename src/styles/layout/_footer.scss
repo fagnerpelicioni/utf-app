@@ -1,0 +1,15 @@
+.nav-footer {
+	background-color: #5CAFE1;
+
+	a {
+		color: $branco;
+
+		&:hover {
+			color: darken(#5CAFE1, 50%);
+		}
+		&:active {
+			color: darken(#5CAFE1, 50%);
+		}
+	}
+
+}
